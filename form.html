@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+            pseudo class : ;  
+            link visited hover active checked focus 
+            pseudo elements :: 
+        */
+      form {
+        width: 50%;
+        padding: 30px;
+        box-sizing: border-box;
+        background-color: #2b2b2b;
+        margin: 50px auto;
+        box-shadow: 5px 5px 25px #2b2b2b;
+        color: whitesmoke;
+      }
+      label {
+        display: inline-block;
+        font-size: 12px;
+        text-transform: capitalize;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        display: block;
+        padding: 0;
+        width: 50%;
+        height: 30px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        outline: none;
+        transition: 300ms;
+        &:focus {
+          width: 100%;
+        }
+        &::placeholder {
+          font-size: 12px;
+          font-weight: bold;
+          text-align: center;
+          color: darkcyan;
+          text-transform: capitalize;
+          opacity: 0.7;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+      }
+      textarea {
+        resize: none;
+        height: 150px;
+      }
+      input[type="submit"] {
+        width: 120px;
+        height: 30px;
+        background-color: #5b5b5b;
+        color: whitesmoke;
+        text-transform: capitalize;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <label for="fullName">fullName</label>
+      <input type="text" placeholder="fullName...!" id="fullName" />
+      <label for="email">email</label>
+      <input type="email" placeholder="email" />
+      <label for="comment">comment</label>
+      <textarea id="comment" placeholder="comment"></textarea>
+      <input type="submit" value="register" />
+    </form>
+  </body>
+</html>
